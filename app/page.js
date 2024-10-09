@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Navbar from "./client/navbar/navbar";
-import Testimonials from "./client/Testimonials/testimonial";
-import Faq from "./client/F&Q/fq";
-import Footer from "./client/footer/footer";
-import PricingPlan from "./client/pricingPlan/pricingPlan";
 import Heading from "./client/heading/heading";
 import Services from "./client/services/services";
 import WhyUs from "./client/whyUs/whyUs";
+import Testimonials from "./client/Testimonials/testimonial";
+import Faq from "./client/F&Q/fq";
+import Footer from "./client/footer/footer";
+import ContactUs from "./client/contactUs/contactUs";
+import PricingPlan from "./client/pricingPlan/pricingPlan";
+import Templates from "./client/templates/templates";
 
 export default function Home() {
   return (
@@ -15,9 +17,14 @@ export default function Home() {
       <Heading />
       <Services />
       <WhyUs />
+      <div className="w-full bg-terinary flex justify-center py-12">
+        <PricingPlan />
+      </div>
+
+      <Templates />
       <Testimonials />
       <Faq />
-
+      <ContactUs />
       <Footer />
     </div>
   );
