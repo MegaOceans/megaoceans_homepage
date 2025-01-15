@@ -3,8 +3,9 @@ import ServiceBar from "./servicesBar/servicesBar";
 export default function Services() {
   return (
     <div className="w-view text-white flex flex-col items-center gap-12">
-      <p className="text-5xl font-extrabold">Our Services</p>
-      <div className="w-full flex items-start gap-4 flex-wrap">
+      <p className="text-5xl font-extrabold text-center">Our Services</p>
+
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
         <ServiceBar
           number={"01"}
           heading={"Webflow Development"}
@@ -16,43 +17,43 @@ export default function Services() {
           ]}
         />
         <ServiceBar
-          number={"01"}
-          heading={"Webflow Development"}
+          number={"02"}
+          heading={"UI/UX Design"}
           array={[
-            "Webflow Site",
-            "Webflow CMS Integration",
-            "Webflow Migration",
-            "Webflow Membership Site",
+            "UI Wireframes",
+            "Prototyping",
+            "User Research",
+            "Interaction Design",
           ]}
         />
         <ServiceBar
-          number={"01"}
-          heading={"Webflow Development"}
+          number={"03"}
+          heading={"Custom Development"}
           array={[
-            "Webflow Site",
-            "Webflow CMS Integration",
-            "Webflow Migration",
-            "Webflow Membership Site",
+            "Custom Websites",
+            "Mobile Applications",
+            "API Integration",
+            "E-commerce Solutions",
           ]}
         />
         <ServiceBar
-          number={"01"}
-          heading={"Webflow Development"}
+          number={"04"}
+          heading={"SEO & Marketing"}
           array={[
-            "Webflow Site",
-            "Webflow CMS Integration",
-            "Webflow Migration",
-            "Webflow Membership Site",
+            "SEO Optimization",
+            "Content Marketing",
+            "Social Media Management",
+            "Pay-Per-Click Campaigns",
           ]}
         />
         <ServiceBar
-          number={"01"}
-          heading={"Webflow Development"}
+          number={"05"}
+          heading={"Consulting Services"}
           array={[
-            "Webflow Site",
-            "Webflow CMS Integration",
-            "Webflow Migration",
-            "Webflow Membership Site",
+            "Business Strategy",
+            "Technology Consulting",
+            "Performance Analysis",
+            "Workshops",
           ]}
         />
       </div>
