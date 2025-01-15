@@ -4,8 +4,11 @@ import { FaUser, FaBusinessTime, FaGift } from "react-icons/fa";
 export default function PricingPlan() {
   return (
     <div className="w-view flex flex-col items-center gap-12 text-white">
+      {/* Title */}
       <p className="text-5xl font-extrabold">Pricing Plan</p>
-      <div className="w-full flex items-start gap-8 justify-between">
+
+      {/* Responsive grid for pricing cards */}
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
         <Price
           text="black"
           bg="secondaryGreen"

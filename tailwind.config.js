@@ -15,6 +15,13 @@ module.exports = {
       colors: {
         green: "#2CEE91",
       },
+      keyframes: {
+        gradient: {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
+      },
       backgroundColor: {
         primary: "#0A0D2D",
         secondary: "#2CEE91",
