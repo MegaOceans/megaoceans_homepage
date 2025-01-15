@@ -1,11 +1,16 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation"; // Import useRouter from next/navigation
 import { FaArrowRight } from "react-icons/fa";
 
 export default function Heading() {
   const [isHoveredContact, setIsHoveredContact] = useState(false);
   const [isHoveredPortfolio, setIsHoveredPortfolio] = useState(false);
+  const router = useRouter(); // Initialize the router
 
+  const handleScrollToContact = () => {
+    router.push("/#contact-us"); // Navigate to the contact-us section on the home page
+  };
   return (
     <div className="w-view flex flex-col items-center justify-center text-center gap-8">
       {/* Heading */}
@@ -29,6 +34,7 @@ export default function Heading() {
           className="flex items-center gap-6 px-6 py-3 rounded-full bg-secondary text-primary font-bold transition duration-300 hover:bg-white"
           onMouseEnter={() => setIsHoveredContact(true)}
           onMouseLeave={() => setIsHoveredContact(false)}
+          onClick={handleScrollToContact}
           aria-label="Contact Us"
         >
           <p className="text-lg hover:text-terinary">Contact Us</p>
@@ -46,6 +52,7 @@ export default function Heading() {
           className="flex items-center gap-6 px-6 py-3 rounded-full bg-white text-primary font-bold transition duration-300 hover:bg-white"
           onMouseEnter={() => setIsHoveredPortfolio(true)}
           onMouseLeave={() => setIsHoveredPortfolio(false)}
+          onClick={() => router.push("/projects")} // Navigate to /projects
           aria-label="See Portfolio"
         >
           <p className="text-lg hover:text-terinary">See Portfolio</p>

@@ -24,7 +24,9 @@ export default function Home() {
       <Templates />
       <Testimonials />
       <Faq />
-      <ContactUs />
+      <div id="contact-us" className="w-full flex justify-center py-12">
+        <ContactUs />
+      </div>
       <Footer />
     </div>
   );
