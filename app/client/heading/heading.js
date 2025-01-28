@@ -8,7 +8,7 @@ export default function Heading() {
 
   return (
     <div className="w-view flex flex-col items-center justify-center text-center gap-8 relative p-36">
-      <div className="bg-[url('assets/blurry-gradient-haikei.png')] bg-cover absolute -left-36  -right-36 top-0 bottom-0 -z-0"></div>
+      <div className="bg-[url('/assets/blurry-gradient-haikei.png')] bg-cover absolute -left-36  -right-36 top-0 bottom-0 -z-0"></div>
       {/* Heading */}
       <div className="flex flex-col items-center gap-6 z-10">
         <p className="text-4xl text-white font-bold leading-normal">
