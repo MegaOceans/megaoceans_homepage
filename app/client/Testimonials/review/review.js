@@ -1,4 +1,5 @@
 import Image from "next/image";
+import defaultImage from "@/app/assets/user-icon.png";
 export default function Review({ company, title, desc, src, name }) {
   return (
     <div className="w-review h-review rounded-3xl bg-terinary px-8 py-10 flex flex-col items-start justify-between">
@@ -7,8 +8,8 @@ export default function Review({ company, title, desc, src, name }) {
       <p className="text-white text-sm font-medium">{desc}</p>
       <div className="flex items-center gap-6 w-full h-12 ">
         <Image
-          src={src}
-          alt={src}
+          src={src || defaultImage}
+          alt={"Client Image"}
           className="w-12 h-12 rounded-full"
           width={48}
           height={48}
