@@ -1,6 +1,7 @@
 import Image from "next/image";
-import defaultImage from "@/app/assets/user-icon.png";
+
 export default function Review({ company, title, desc, src, name }) {
+  const defaultImage = "/assets/user-icon.png";
   return (
     <div className="w-review h-review rounded-3xl bg-terinary px-8 py-10 flex flex-col items-start justify-between">
       <p className="text-reviewLogo text-lg font-medium">{company}</p>
