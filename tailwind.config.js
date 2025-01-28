@@ -15,6 +15,10 @@ module.exports = {
       colors: {
         green: "#2CEE91",
       },
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+        poiret: ["Poiret", "sans-serif"],
+      },
       keyframes: {
         gradient: {
           "0%": { backgroundPosition: "0% 50%" },

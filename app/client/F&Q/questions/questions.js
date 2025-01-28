@@ -30,7 +30,7 @@ export default function Questions({ question, answer }) {
           isOpen ? "max-h-96" : "max-h-0"
         }`}
       >
-        <p className="p-4 text-black text-sm w-full bg-white rounded-xl mt-2">
+        <p className="p-4 text-sm w-full bg-primary rounded-xl mt-2 text-white">
           {answer}
         </p>
       </div>
