@@ -1,9 +1,15 @@
 import { MdAddCall } from "react-icons/md";
-
+import Image from "next/image";
 export default function Social() {
   return (
     <div className="w-full lg:w-contact h-contactUs flex flex-col p-8 items-start justify-between rounded-3xl bg-secondaryGreen">
-      <img src="" className="w-24 h-24 rounded-full mb-4" alt="Profile" />
+      <Image
+        src=""
+        className="w-24 h-24 rounded-full mb-4"
+        alt="Profile"
+        width={96}
+        height={96}
+      />
       <p className="text-black text-4xl font-bold">
         Let&rsquo;s hop on a free call
       </p>

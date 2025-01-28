@@ -2,7 +2,7 @@
 import React, { useRef } from "react";
 import Navbar from "../client/navbar/navbar";
 import { motion, useScroll, useTransform } from "framer-motion";
-
+import Image from "next/image";
 const ProjectSection = ({ project, isEven }) => {
   const sectionRef = useRef(null);
 
@@ -30,10 +30,11 @@ const ProjectSection = ({ project, isEven }) => {
             viewport={{ once: true }}
           >
             <div className="relative aspect-video overflow-hidden rounded-xl">
-              <img
+              <Image
                 src={project.image || "/api/placeholder/1200/800"}
                 alt={project.title}
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+                layout="fit"
               />
             </div>
           </motion.div>
