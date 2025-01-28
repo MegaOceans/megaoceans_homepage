@@ -7,12 +7,13 @@ export default function Heading() {
   const [isHoveredPortfolio, setIsHoveredPortfolio] = useState(false);
 
   return (
-    <div className="w-view flex flex-col items-center justify-center text-center gap-8">
+    <div className="w-view flex flex-col items-center justify-center text-center gap-8 relative p-36">
+      <div className="bg-[url('assets/blurry-gradient-haikei.png')] bg-cover absolute -left-36  -right-36 top-0 bottom-0 -z-0"></div>
       {/* Heading */}
-      <div className="flex flex-col items-center gap-6">
+      <div className="flex flex-col items-center gap-6 z-10">
         <p className="text-4xl text-white font-bold leading-normal">
           <span className="text-secondary italic text-5xl mr-4">Bold</span>
-          Designs for Brands That Don’t Do
+          Designs for Brands That Don&rsquo;t Do
           <span className="text-secondary italic text-5xl ml-4">Boring</span>
         </p>
         <p className="text-lg font-medium text-white max-w-3xl">
@@ -23,7 +24,7 @@ export default function Heading() {
       </div>
 
       {/* Buttons */}
-      <div className="flex flex-col sm:flex-row gap-6 items-center justify-center mt-8">
+      <div className="flex flex-col sm:flex-row gap-6 items-center justify-center mt-8 z-10">
         {/* Contact Us Button */}
         <button
           className="flex items-center gap-6 px-6 py-3 rounded-full bg-secondary text-primary font-bold transition duration-300 hover:bg-white"
