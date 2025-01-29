@@ -74,6 +74,12 @@ export default function PricingPlan() {
           iconColor="primary"
         />
       </div>
+      <div className="w-full bg-gray-200 text-black py-4 px-6 flex flex-col md:flex-row items-center justify-between rounded-lg">
+        <p className="text-lg font-medium">Get started today!</p>
+        <button className="bg-secondary font-semibold px-6 py-2 rounded-lg mt-3 md:mt-0 hover:bg-primary-dark transition">
+          Subscribe Now
+        </button>
+      </div>
     </div>
   );
 }
