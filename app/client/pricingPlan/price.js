@@ -21,7 +21,7 @@ export default function Price({
         <p className="text-3xl font-bold">{type}</p>
         <p className="text-4xl font-bold">
           {price}
-          <span className="text-2xl font-semibold">/month</span>
+          <span className="text-2xl font-semibold">/hour</span>
         </p>
       </div>
 

@@ -12,49 +12,65 @@ export default function PricingPlan() {
         <Price
           text="black"
           bg="secondaryGreen"
-          type="Free"
-          price="$0"
+          type="Starter"
+          price="$30"
           icon={<FaGift className="text-primary" size={30} />}
-          description="Perfect for individuals trying out our services."
-          features={["Basic design tools", "1 project", "Community support"]}
-          services={["Standard templates", "Basic analytics"]}
+          description="Perfect for small and simple app of any type."
+          features={[
+            "Simple UI/UX Design",
+            "Basic Functionality",
+            "Responsive App Design",
+          ]}
+          services={[
+            "1 year maintainance",
+            "Frontend & Backend",
+            "Basic API Integration",
+            "Bug Fixes & Testing",
+          ]}
           iconColor="primary"
         />
         <Price
           text="white"
           bg="primary"
           type="Business"
-          price="$29.99"
+          price="$90"
           icon={<FaBusinessTime className="text-white" size={30} />}
           description="Best for businesses needing full support."
           features={[
-            "All design tools",
-            "Unlimited projects and teams",
+            "All features of Professional",
+            "Scalable Architecture",
+            "Cloud Integration",
+            "High-Security Standards",
             "24/7 priority support",
             "Dedicated account manager",
           ]}
           services={[
-            "Custom branding",
-            "Advanced analytics",
-            "API integration",
-            "Custom solutions",
+            "Enterprise-Grade Development",
+            "DevOps & Deployment Support",
+            "Continuous Maintenance",
           ]}
           iconColor="secondary"
         />
         <Price
           text="black"
           bg="secondary"
-          type="Individual"
-          price="$9.99"
+          type="Professional"
+          price="$60"
           icon={<FaUser className="text-black" size={30} />}
           description="Ideal for freelancers and small projects."
           features={[
-            "Advanced design tools",
-            "Unlimited projects",
+            "All Feature of Starter",
+            "Advanced UI/UX Design",
+            "Custom Animations",
+            "Database Integration",
             "Email support",
             "24/7 priority support",
           ]}
-          services={["Custom templates", "In-depth analytics"]}
+          services={[
+            "Full-Stack Development",
+            "API & Third-Party Integrations",
+            "Performance Optimization",
+          ]}
           iconColor="primary"
         />
       </div>
