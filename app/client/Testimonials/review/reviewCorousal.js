@@ -25,48 +25,53 @@ const ReviewCarousel = ({ reviews }) => {
   };
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto overflow-hidden">
-      <div
-        className="flex transition-transform duration-500 ease-in-out gap-4"
-        style={{
-          transform: `translateX(-${currentIndex * 100}%)`,
-          width: `${totalSlides * 100}%`,
-        }}
-      >
-        {Array.from({ length: totalSlides }).map((_, slideIndex) => (
-          <div key={slideIndex} className="flex min-w-full gap-4">
-            {reviews
-              .slice(
-                slideIndex * itemsPerPage,
-                slideIndex * itemsPerPage + itemsPerPage
-              )
-              .map((review, index) => (
-                <Review
-                  key={index}
-                  company={review.company}
-                  title={review.title}
-                  desc={review.desc}
-                  name={review.name}
-                />
-              ))}
-          </div>
-        ))}
-      </div>
-
-      {/* Left Arrow */}
+    <div className="relative flex items-center justify-center w-full mx-auto">
+      {/* Left Arrow (Outside) */}
       <button
         onClick={handlePrev}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700 z-10"
+        className="relative left-0 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 z-10 hover:text-secondary"
+        style={{ top: "50%" }}
       >
-        <FaChevronLeft />
+        <FaChevronLeft size={24} />
       </button>
 
-      {/* Right Arrow */}
+      {/* Review Container */}
+      <div className="overflow-hidden w-full flex px-64">
+        <div
+          className="flex transition-transform duration-500 ease-in-out gap-4"
+          style={{
+            transform: `translateX(-${currentIndex * 100}%)`,
+            width: `${totalSlides * 100}%`,
+          }}
+        >
+          {Array.from({ length: totalSlides }).map((_, slideIndex) => (
+            <div key={slideIndex} className="flex min-w-full gap-4">
+              {reviews
+                .slice(
+                  slideIndex * itemsPerPage,
+                  slideIndex * itemsPerPage + itemsPerPage
+                )
+                .map((review, index) => (
+                  <Review
+                    key={index}
+                    company={review.company}
+                    title={review.title}
+                    desc={review.desc}
+                    name={review.name}
+                  />
+                ))}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Right Arrow (Outside) */}
       <button
         onClick={handleNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700"
+        className="relative right-0 transform -translate-y-1/2 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 z-10 hover:text-secondary"
+        style={{ top: "50%" }}
       >
-        <FaChevronRight />
+        <FaChevronRight size={24} />
       </button>
     </div>
   );

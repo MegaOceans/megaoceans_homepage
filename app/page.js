@@ -12,7 +12,7 @@ import Templates from "./client/templates/templates";
 
 export default function Home() {
   return (
-    <div className="w-screen h-screen bg-primary flex items-center flex-col gap-28 overflow-scroll">
+    <div className="w-screen h-screen bg-primary flex items-center flex-col gap-28 overflow-scroll overflow-x-hidden">
       <Navbar />
       <Heading />
       <Services />
