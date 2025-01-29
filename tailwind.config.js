@@ -38,6 +38,7 @@ module.exports = {
         primary: "#0A0D2D",
         terinary: "#343651",
         text: "#E7E7EA",
+        secondaryGreen: "#85F5BF",
       },
       width: {
         view: "85%",

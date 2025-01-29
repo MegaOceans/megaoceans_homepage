@@ -27,6 +27,7 @@ export default function ServiceBar({ number, heading, array }) {
             fill: "white", // Icon color
             stroke: "white", // Ensure stroke matches fill
           }}
+          className=" transition-transform duration-300 ease-in-out group-hover:rotate-45"
         />
       </div>
     </div>
