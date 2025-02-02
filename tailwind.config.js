@@ -71,6 +71,15 @@ module.exports = {
         white: "#FFFFFF", // White color fill
         red: "#FF0000", // Red color fill
       },
+      minWidth: {
+        review: "358px",
+      },
+      minHeight: {
+        review: "469px",
+      },
+      maxWidth: {
+        review: "358px",
+      },
     },
   },
   plugins: [],

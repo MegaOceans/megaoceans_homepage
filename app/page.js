@@ -9,6 +9,7 @@ import Footer from "./client/footer/footer";
 import ContactUs from "./client/contactUs/contactUs";
 import PricingPlan from "./client/pricingPlan/pricingPlan";
 import Templates from "./client/templates/templates";
+import MainTestimonial from "./client/Testimonials/NewTestimonial/MainTestimonial";
 
 export default function Home() {
   return (
@@ -22,7 +23,9 @@ export default function Home() {
       </div>
 
       <Templates />
-      <Testimonials />
+      {/* <Testimonials />
+       */}
+      <MainTestimonial />
       <Faq />
       <ContactUs />
       <Footer />
