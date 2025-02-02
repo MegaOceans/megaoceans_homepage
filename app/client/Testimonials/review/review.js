@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Review({ company, title, desc, src, name }) {
   const defaultImage = "/assets/user-icon.png";
   return (
-    <div className="w-review h-review rounded-3xl bg-terinary px-8 py-10 flex flex-col items-start justify-between">
+    <div className="min-w-review max-w-review min-h-review rounded-3xl bg-terinary px-8 py-10 flex flex-col items-start justify-between">
       <p className="text-reviewLogo text-lg font-medium">{company}</p>
       <p className="text-white text-2xl font-semibold">{title}</p>
       <p className="text-white text-sm font-medium">{desc}</p>
