@@ -45,7 +45,7 @@ const ReviewCarousel = ({ reviews }) => {
             key={index}
             onClick={() => setCurrentIndex(index)}
             className={`w-3 h-3 mx-1 rounded-full ${
-              currentIndex === index ? "bg-blue-600" : "bg-gray-300"
+              currentIndex === index ? "bg-secondary" : "bg-gray-300"
             }`}
           ></button>
         ))}
