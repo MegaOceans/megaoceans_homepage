@@ -11,8 +11,8 @@ const SvgBG = () => {
         let move = () => {
           wave.animate(
             [
-              { transform: `translateX(-50px) scale(${1 + scrollYa / 100})` },
-              { transform: `translateX(50px) scale(${1 + scrollYa / 100})` },
+              { transform: `translateX(-50px) scale(${1 + scrollYa / 500})` },
+              { transform: `translateX(50px) scale(${1 + scrollYa / 500})` },
             ],
             {
               duration: speed,
@@ -39,7 +39,7 @@ const SvgBG = () => {
   }, [scrollYa]);
 
   return (
-    <div className=" absolute left-0 top-0 w-full h-full -z-10">
+    <div className=" absolute left-0 top-0 w-full h-full z-0">
       <svg id="visual" viewBox="0 0 800 500" className="w-full h-full">
         <rect x="0" y="0" width="900" height="600" fill="#001220"></rect>
 

@@ -2,7 +2,7 @@ import Link from "./link.js/link";
 
 export default function Footer() {
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-8 py-12 bg-black">
+    <div className="w-full px-4 sm:px-6 lg:px-8 py-12 bg-primary">
       <div className="max-w-7xl mx-auto">
         {/* Top Section */}
         <div className="flex flex-col lg:flex-row items-start justify-between gap-8 lg:gap-12">
@@ -48,11 +48,11 @@ export default function Footer() {
 
         {/* Bottom Section */}
         <div className="flex flex-col items-center gap-4 w-full mt-12 pt-8 border-t border-gray-700">
-          <p className="text-white text-2xl lg:text-6xl  font-bold text-center">
+          <p className="text-white text-2xl sm:text-4xl md:text-6xl lg:text-footer  font-bold text-center">
             Mega Oceans
           </p>
-          <p className="text-white text-sm font-semibold text-center">
-            © 2024 All rights reserved | Mega Oceans
+          <p className="text-white text-sm lg:text-xl font-semibold text-center">
+            © 2025 All rights reserved | Mega Oceans
           </p>
         </div>
       </div>

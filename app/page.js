@@ -15,7 +15,7 @@ export default function Home() {
   const contactUsRef = useRef(null); // Create a reference for ContactUs
 
   return (
-    <div className="w-screen  flex items-center flex-col   overflow-scroll overflow-x-hidden">
+    <div className="flex items-center flex-col overflow-x-hidden">
       <Navbar contactUsRef={contactUsRef} /> {/* Pass ref to Navbar */}
       <Heading contactUsRef={contactUsRef} />
       <Services />
