@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Navbar from "../client/navbar/navbar";
 
 const images = [

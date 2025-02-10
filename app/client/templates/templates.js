@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 // import newImage from "@/app/assets/img1.png";
 // import easyformationsImage from "@/app/assets/easyformations.jpeg";
 // import easyformationsImage2 from "@/app/assets/easyformations2.jpeg";
