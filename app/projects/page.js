@@ -1,8 +1,16 @@
 "use client";
 import React, { useRef } from "react";
+import { motion } from "framer-motion";
+import Image from "next/legacy/image";
 import Navbar from "../client/navbar/navbar";
-import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
+
+const images = [
+  "/assets/templates/img1.png",
+  "/assets/templates/easyformations.jpeg",
+  "/assets/templates/easyformations2.jpeg",
+  "/assets/templates/mob-app.png",
+];
+
 const ProjectSection = ({ project, isEven }) => {
   const sectionRef = useRef(null);
 
@@ -21,22 +29,35 @@ const ProjectSection = ({ project, isEven }) => {
             isEven ? "md:flex-row-reverse" : "md:flex-row"
           }`}
         >
-          {/* Image Section */}
+          {/* Auto Scrolling Image Section */}
           <motion.div
-            className="w-full md:w-1/2"
+            className="w-full md:w-1/2 relative h-[300px] overflow-hidden rounded-xl"
             initial={{ x: isEven ? 100 : -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="relative aspect-video overflow-hidden rounded-xl">
-              <Image
-                src={project.image || "/api/placeholder/1200/800"}
-                alt={project.title}
-                className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
-                layout="fit"
-              />
-            </div>
+            <motion.div
+              className="absolute w-full flex flex-col gap-4"
+              animate={{ y: ["0%", "-100%"] }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+            >
+              {images.map((img, index) => (
+                <div key={index} className="relative w-full h-[300px]">
+                  <Image
+                    src={img}
+                    alt={`Project Image ${index + 1}`}
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-xl"
+                  />
+                </div>
+              ))}
+            </motion.div>
           </motion.div>
 
           {/* Content Section */}
@@ -79,17 +100,6 @@ const ProjectSection = ({ project, isEven }) => {
                     </li>
                   ))}
                 </ul>
-              </div>
-
-              <div className="pt-4">
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-8 py-3 bg-secondary text-primary rounded-full font-semibold hover:bg-secondaryGreen transition-colors duration-300"
-                >
-                  View Live Project
-                </a>
               </div>
             </div>
           </motion.div>

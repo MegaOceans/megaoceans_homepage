@@ -39,8 +39,8 @@ const MainTestimonial = () => {
     },
   ];
   return (
-    <div className="w-full relative flex flex-col items-center gap-36 overflow-visible">
-      <p className="text-5xl font-extrabold">Testimonial</p>
+    <div className="w-full relative flex flex-col items-center gap-36 overflow-visible bg-primary">
+      <p className="text-5xl text-white font-extrabold">Testimonial</p>
       <ReviewCarousel reviews={reviews} />
     </div>
   );

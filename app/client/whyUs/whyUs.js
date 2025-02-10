@@ -8,7 +8,7 @@ import { FaPeopleArrows } from "react-icons/fa";
 import { GiTakeMyMoney } from "react-icons/gi";
 export default function WhyUs() {
   return (
-    <div className="w-view flex flex-col items-center gap-12 text-white">
+    <div className="w-full bg-primary flex flex-col items-center gap-12 py-28 text-white">
       <p className="text-5xl font-extrabold">Why Us</p>
       <div className="w-full flex items-center gap-4 flex-wrap justify-center">
         <WhyUsBar
