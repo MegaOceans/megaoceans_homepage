@@ -32,7 +32,7 @@ export default function Heading({ contactUsRef }) {
           <p className="text-lg font-medium text-white max-w-3xl">
             From innovative designs that captivate to seamless functionality
             that performs, experience the Bold Designs difference and elevate
-            your brand's presence.
+            your brand&apos;s presence.
           </p>
         </div>
 
