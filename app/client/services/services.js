@@ -2,10 +2,10 @@ import ServiceBar from "./servicesBar/servicesBar";
 
 export default function Services() {
   return (
-    <div className="w-view text-white flex flex-col items-center gap-12">
+    <div className="w-full text-white flex flex-col items-center gap-12 py-12 bg-primary">
       <p className="text-5xl font-extrabold text-center">Our Services</p>
 
-      <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+      <div className="w-view grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
         <ServiceBar
           number={"01"}
           heading={"Webflow Development"}

@@ -2,7 +2,7 @@ import Questions from "./questions/questions";
 
 export default function Faq() {
   return (
-    <div className="w-full flex flex-col items-center gap-12 text-white ">
+    <div className="w-full flex flex-col items-center gap-12 text-white bg-primary py-24 ">
       <p className="text-5xl font-extrabold">FaQ</p>
       <div className="w-view flex flex-col items-center gap-6">
         <Questions

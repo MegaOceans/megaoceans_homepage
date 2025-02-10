@@ -56,13 +56,13 @@ module.exports = {
         review: "469px",
         servicesBar: "550px",
         whyUs: "320px",
-        contactUs: "600px",
+        contactUs: "700px",
         Input: "30px",
         price: "750px",
       },
 
       fontSize: {
-        footer: "192px",
+        footer: "180px",
       },
       fill: {
         primary: "#0A0D2D", // Primary color for fill

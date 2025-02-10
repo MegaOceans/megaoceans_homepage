@@ -2,13 +2,13 @@ import Input from "./input";
 
 export default function Form() {
   return (
-    <div className="w-full lg:w-form rounded-3xl h-auto bg-terinary flex p-8 flex-col items-start gap-6">
+    <div className="w-full lg:w-form rounded-3xl h-contactUs bg-terinary flex p-8 flex-col items-start gap-6">
       <p className="text-text text-xl font-medium">Got a project in Mind?</p>
       <p className="text-text text-4xl lg:text-6xl font-bold">
         Let’s Discuss The Details
       </p>
       <div className="w-full flex flex-col gap-6">
-        <div className="w-full flex flex-col sm:flex-row sm:gap-4">
+        <div className="w-full flex flex-col ">
           <Input label="Name" placeholder="Enter Name" />
           <Input label="Company Name" placeholder="Enter Company Name" />
         </div>
