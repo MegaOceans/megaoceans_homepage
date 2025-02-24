@@ -6,7 +6,7 @@ import Carousel from "./ImageCorousal";
 export default function Templates() {
   const images = [
     "/assets/templates/img1.png",
-    "/assets/templates/easyformations.jpeg",
+    "/assets/templates/easyformations.png",
     "/assets/templates/easyformations2.jpeg",
     "/assets/templates/mob-app.png",
   ];

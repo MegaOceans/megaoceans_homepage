@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 import SvgBG from "./SvgBG";
+import Parallax from "./Parallax";
 export default function Heading({ contactUsRef }) {
   const [isHoveredContact, setIsHoveredContact] = useState(false);
   const [isHoveredPortfolio, setIsHoveredPortfolio] = useState(false);
@@ -21,6 +22,7 @@ export default function Heading({ contactUsRef }) {
     <div className="relative w-full min-h-screen flex flex-col items-center justify-center text-center px-36 mt-16 lg:mt-2 py-12 overflow-hidden bg-[#001220]">
       {/* Background Image Container */}
       <SvgBG />
+      {/* <Parallax /> */}
       {/* Heading Content */}
       <div className="z-10">
         <div className="flex flex-col items-center gap-6 py-8">
