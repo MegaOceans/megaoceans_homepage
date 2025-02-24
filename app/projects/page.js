@@ -21,7 +21,7 @@ const ProjectSection = ({ project, isEven }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="min-h-screen w-full flex items-center border-b border-terinary"
+      className="min-h-screen flex items-center"
     >
       <div className="container mx-auto px-4">
         <div
