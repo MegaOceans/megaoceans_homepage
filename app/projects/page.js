@@ -31,7 +31,7 @@ const ProjectSection = ({ project, isEven }) => {
         >
           {/* Auto Scrolling Image Section */}
           <motion.div
-            className="w-full md:w-1/2 relative h-[300px] overflow-hidden rounded-xl"
+            className="w-full md:w-1/2 relative  overflow-hidden rounded-xl"
             initial={{ x: isEven ? 100 : -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -41,13 +41,16 @@ const ProjectSection = ({ project, isEven }) => {
               className="absolute w-full flex flex-col gap-4"
               animate={{ y: ["0%", "-100%"] }}
               transition={{
-                duration: 8,
+                duration: 100,
                 repeat: Infinity,
                 ease: "linear",
               }}
             >
-              {images.map((img, index) => (
-                <div key={index} className="relative w-full h-[300px]">
+              {project.image.map((img, index) => (
+                <div
+                  key={index}
+                  className="relative min-h-[500px] aspect-auto m-10"
+                >
                   <Image
                     src={img}
                     alt={`Project Image ${index + 1}`}
@@ -112,10 +115,82 @@ const ProjectSection = ({ project, isEven }) => {
 const Projects = () => {
   const projects = [
     {
+      title: "Clio AI",
+      description:
+        "Elevate your financial journey with our intelligent chat app. Get instant insights into your portfolio's performance with simple questions. Effortlessly track asset allocation, analyze trends, and make informed decisions. This intuitive tool empowers you to manage your investments directly, offering a seamless and secure experience. Stay connected to your financial health anytime, anywhere. Experience the power of AI-driven portfolio management at your fingertips.",
+      image: [
+        "/assets/templates/clioAI.png",
+        "/assets/templates/clio-ai-1.png",
+        "/assets/templates/clioAI.png",
+        "/assets/templates/clio-ai-1.png",
+        "/assets/templates/clioAI.png",
+        "/assets/templates/clio-ai-1.png",
+      ],
+      tags: [
+        "React",
+        "Python",
+        "Django",
+        "OpenAI",
+        "FinanceAPI",
+        "Postgres",
+        "AWS",
+        "Redux",
+      ],
+      features: [
+        "Intelligent Chat Interface: Get instant answers to your financial queries and real-time portfolio updates through a simple, conversational chat.",
+        "Comprehensive Portfolio Overview: Access a clear and detailed breakdown of your holdings, asset allocation, and overall performance at a glance.",
+        "Direct Portfolio Management: Execute trades, rebalance your portfolio, and manage your investments directly within the secure app environment.",
+        "Personalized Financial Insights: Receive AI-powered analysis and tailored insights to help you understand market trends and optimize your investment strategy.",
+        "Secure and Accessible Anytime: Your financial data is protected with robust security measures, allowing you to monitor and manage your portfolio conveniently, 24/7.",
+      ],
+      link: "#",
+    },
+
+    {
+      title: "Easyformations",
+      description:
+        "Launching your dream? EasyFormations streamlines the daunting task of company setup. Our app simplifies document formalities, company registration, and all those crucial initial requirements. But we're more than just startups! We expertly handle GST and income tax filings, plus other essential legal compliance for both new and established businesses. Navigate the complexities with ease, ensuring you're always on track. Let EasyFormations handle the paperwork, so you can focus on building your success.",
+      image: [
+        "/assets/templates/img1.png",
+        "/assets/templates/easyformations.jpeg",
+        "/assets/templates/easyformations2.jpeg",
+        "/assets/templates/img1.png",
+        "/assets/templates/easyformations.jpeg",
+        "/assets/templates/easyformations2.jpeg",
+        "/assets/templates/img1.png",
+        "/assets/templates/easyformations.jpeg",
+        "/assets/templates/easyformations2.jpeg",
+      ],
+      tags: [
+        "React",
+        "Node.js",
+        "Express",
+        "Postgres",
+        "WebSockets",
+        "WhatsappAPI",
+        "Payment Gateway",
+        "AWS",
+        "Redux",
+      ],
+      features: [
+        "Simplified Company Registration: Effortlessly navigate the complexities of new company setup, from document preparation to final registration.",
+        "Seamless GST & Tax Filing: Easily manage your GST and income tax obligations, ensuring timely and accurate submissions for new and existing businesses.",
+        "Expert Legal Compliance: Stay on top of essential legal requirements and filings beyond taxes, all within a user-friendly interface.",
+        "Document Management Hub: Securely store and access all your crucial company documents in one centralized location.",
+        "Dedicated Support & Guidance: Receive helpful resources and guidance throughout the formation and compliance processes, ensuring a smooth experience.",
+      ],
+      link: "#",
+    },
+    {
       title: "E-Commerce Platform Redesign",
       description:
         "A complete overhaul of an existing e-commerce platform, focusing on user experience and conversion optimization. The project involved rebuilding the entire frontend architecture and implementing a new design system.",
-      image: "/api/placeholder/1200/800",
+      image: [
+        "/assets/templates/img1.png",
+        "/assets/templates/easyformations.jpeg",
+        "/assets/templates/easyformations2.jpeg",
+        "/assets/templates/mob-app.png",
+      ],
       tags: ["React", "Node.js", "MongoDB", "AWS", "Redux"],
       features: [
         "Custom-built shopping cart with real-time updates",
@@ -130,7 +205,12 @@ const Projects = () => {
       title: "Financial Analytics Dashboard",
       description:
         "A sophisticated financial dashboard designed for investment professionals, providing real-time market data analysis and portfolio management tools. The platform processes millions of data points to deliver actionable insights.",
-      image: "/api/placeholder/1200/800",
+      image: [
+        "/assets/templates/img1.png",
+        "/assets/templates/easyformations.jpeg",
+        "/assets/templates/easyformations2.jpeg",
+        "/assets/templates/mob-app.png",
+      ],
       tags: ["Next.js", "TypeScript", "D3.js", "PostgreSQL", "WebSocket"],
       features: [
         "Real-time data visualization with interactive charts",
