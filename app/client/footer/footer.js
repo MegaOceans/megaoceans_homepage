@@ -17,10 +17,10 @@ export default function Footer() {
             <div className="flex flex-col items-center sm:items-start text-white gap-4 sm:gap-6">
               <p className="text-xl sm:text-2xl font-bold">Products</p>
               <div className="flex flex-col items-center sm:items-start gap-2 text-base font-medium">
-                <Link link="Figma Devchecklist" />
-                <Link link="ZeroCostLogo" />
-                <Link link="Webflow Checklist" />
-                <Link link="Webflow Templates" />
+                <Link title="Figma Devchecklist" />
+                <Link title="ZeroCostLogo" />
+                <Link title="Webflow Checklist" />
+                <Link title="Webflow Templates" />
               </div>
             </div>
 
@@ -28,9 +28,10 @@ export default function Footer() {
             <div className="flex flex-col items-center sm:items-start text-white gap-4 sm:gap-6">
               <p className="text-xl sm:text-2xl font-bold">Links</p>
               <div className="flex flex-col items-center sm:items-start gap-2 text-base font-medium">
-                <Link link="About" />
-                <Link link="Showcase" />
-                <Link link="Contact" />
+                <Link title="About" link="" />
+                <Link title="Showcase" link="" />
+                <Link title="Contact" link="" />
+                <Link title="Privacy Policies" link="/privacy" />
               </div>
             </div>
 
@@ -38,9 +39,9 @@ export default function Footer() {
             <div className="flex flex-col items-center sm:items-start text-white gap-4 sm:gap-6">
               <p className="text-xl sm:text-2xl font-bold">Social</p>
               <div className="flex flex-col items-center sm:items-start gap-2 text-base font-medium">
-                <Link link="Facebook" />
-                <Link link="Twitter" />
-                <Link link="Linkedin" />
+                <Link title="Facebook" />
+                <Link title="Twitter" />
+                <Link title="Linkedin" />
               </div>
             </div>
           </div>

@@ -49,7 +49,7 @@ const ProjectSection = ({ project, isEven }) => {
               {project.image.map((img, index) => (
                 <div
                   key={index}
-                  className="relative min-h-[500px] aspect-auto m-10"
+                  className="relative min-h-[500px] aspect-auto mx-10"
                 >
                   <Image
                     src={img}
@@ -87,7 +87,7 @@ const ProjectSection = ({ project, isEven }) => {
                 ))}
               </div>
 
-              <p className="text-reviewLogo text-lg leading-relaxed">
+              <p className="text-reviewLogo text-lg leading-relaxed text-justify">
                 {project.description}
               </p>
 
@@ -95,7 +95,7 @@ const ProjectSection = ({ project, isEven }) => {
                 <h3 className="text-xl font-semibold text-text">
                   Key Features
                 </h3>
-                <ul className="space-y-2 text-reviewLogo">
+                <ul className="space-y-2 text-reviewLogo text-justify">
                   {project.features.map((feature, index) => (
                     <li key={index} className="flex items-start">
                       <span className="text-secondary mr-2">•</span>
