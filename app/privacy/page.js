@@ -292,7 +292,7 @@ const PrivacyPolicy = () => {
           <li>
             <span className="font-bold">To contact You:</span> To contact You by
             email, telephone calls, SMS, or other equivalent forms of electronic
-            communication, such as a mobile application's push notifications
+            communication, such as a mobile application&apos;s push notifications
             regarding updates or informative communications related to the
             functionalities, products or contracted services, including the
             security updates, when necessary or reasonable for their
@@ -484,7 +484,7 @@ const PrivacyPolicy = () => {
           its absolute security.
         </p>
 
-        <h2 className="text-xl font-bold mt-8 mb-4">Children's Privacy</h2>
+        <h2 className="text-xl font-bold mt-8 mb-4">Children&apos;s Privacy</h2>
         <p className="mb-2">
           Our Service does not address anyone under the age of 13. We do not
           knowingly collect personally identifiable information from anyone
