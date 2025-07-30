@@ -154,7 +154,7 @@ export default function ShopifyPage() {
                   Looking for Shopify Website?
                 </h3>
                 <p className="text-gray-600 mb-6">
-                  Send us your info — we'll be in touch soon.
+                  Send us your info — we&apos;ll be in touch soon.
                 </p>
 
                 <form className="space-y-4">
@@ -245,8 +245,8 @@ export default function ShopifyPage() {
                 Custom & Responsive Development
               </h3>
               <p className="text-gray-600">
-                Make the most of Shopify's flexibility with a design that works
-                flawlessly across multiple devices efficiently.
+                Make the most of Shopify&apos;s flexibility with a design that
+                works flawlessly across multiple devices efficiently.
               </p>
             </div>
 
@@ -481,12 +481,12 @@ export default function ShopifyPage() {
               Development Company
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              There's more than meets the eye when it comes to Ecommerce
-              websites making the right impact and conversions. With MegaOceans'
-              Shopify development services, you get to make the most of
-              Shopify's brilliant features with our reputation of creative
-              thinkers that amalgamate functionality with design like nobody
-              else.
+              There&apos;s more than meets the eye when it comes to Ecommerce
+              websites making the right impact and conversions. With
+              MegaOceans&apos; Shopify development services, you get to make the
+              most of Shopify&apos;s brilliant features with our reputation of
+              creative thinkers that amalgamate functionality with design like
+              nobody else.
             </p>
           </div>
 
@@ -586,7 +586,7 @@ export default function ShopifyPage() {
             ].map((testimonial, index) => (
               <div key={index} className="bg-gray-50 p-6 rounded-xl">
                 <p className="text-gray-700 mb-4 italic">
-                  "{testimonial.text}"
+                  &ldquo;{testimonial.text}&rdquo;
                 </p>
                 <div>
                   <p className="font-semibold text-gray-900">
@@ -792,7 +792,7 @@ export default function ShopifyPage() {
                 Looking for Shopify Website?
               </h3>
               <p className="text-gray-600 mb-6">
-                Send us your info — we'll be in touch soon.
+                Send us your info — we&apos;ll be in touch soon.
               </p>
 
               <form className="space-y-4">
@@ -825,7 +825,7 @@ export default function ShopifyPage() {
                 Looking for Digital Marketing Service?
               </h3>
               <p className="text-gray-600 mb-6">
-                Send us your info — we'll be in touch soon.
+                Send us your info — we&apos;ll be in touch soon.
               </p>
 
               <form className="space-y-4">
