@@ -779,7 +779,7 @@ export default function ShopifyPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
-              Let's get into something new, collaboratively!
+              Let&apos;s get into something new, collaboratively!
             </h2>
             <p className="text-xl text-blue-100">
               Connect with the Best Shopify Development Company Today!
