@@ -1,47 +1,59 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-
+import { CheckCircleIcon } from "@heroicons/react/24/solid";
+import { StarIcon } from '@heroicons/react/24/solid';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/autoplay';
+import { Autoplay } from 'swiper/modules';
+import TestimonialsSection from "./testimonial";
+import WhyMegaoceans from "./pros";
+import Footer from "../client/footer/footer";
+import SvgBG from "../client/heading/SvgBG";
+import { FaArrowRight, FaRegCheckCircle } from "react-icons/fa";
+import ShopifyFeatures from "./shopifyFeatures";
 export default function ShopifyPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white ">
       {/* Navigation */}
-      <nav className="bg-white shadow-lg fixed w-full z-50">
+      <nav className="bg-primary shadow-lg fixed w-full z-50">
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <div className="text-2xl font-bold text-blue-600">MegaOceans</div>
+              <div className="text-2xl font-bold text-white">MegaOceans</div>
             </div>
 
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 <a
                   href="#about"
-                  className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-white hover:text-secondary px-3 py-2 rounded-md text-sm font-medium"
                 >
                   About Us
                 </a>
                 <a
                   href="#services"
-                  className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-white hover:text-secondary px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Services
                 </a>
                 <a
                   href="#portfolio"
-                  className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-white hover:text-secondary px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Portfolio
                 </a>
                 <a
                   href="#contact"
-                  className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-white hover:text-secondary px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Contact
                 </a>
-                <button className="bg-blue-600 text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-blue-700">
+                <button className="bg-secondary  px-6 py-2 rounded-md text-sm font-medium hover:bg-secondaryGreen">
                   Start a Project
                 </button>
               </div>
@@ -103,329 +115,340 @@ export default function ShopifyPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+      <section className="pt-20 bg-terinary h-screen  flex flex-col items-center w-full relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-                The Best Shopify Development Company
+              <h1 className="text-5xl lg:text-[50px] font-semibold text-white mb-6">
+                The Best <span className="text-secondary lg:text-[50px] text-5xl ">Shopify Development</span> Company
+              
               </h1>
-              <p className="text-xl text-gray-600 mb-8">
+              <p className="text-lg text-white mb-8">
                 Partner with us to develop your e-commerce Store With the Best
                 Shopify Development Company while maintaining 100% ownership and
                 control.
               </p>
 
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                  <span className="text-gray-700">
-                    Highly Experienced Developer
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                  <span className="text-gray-700">
-                    10+ Years of Industry Expertise
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                  <span className="text-gray-700">
-                    500+ online stores delivered
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                  <span className="text-gray-700">
-                    Affordable Costing but quality never compromise
-                  </span>
-                </div>
-              </div>
+             <div className="space-y-4 mb-8">
+  <div className="flex items-center">
+    <FaRegCheckCircle className={`text-secondary`} />
+    <span className="text-white ml-4">
+      Highly Experienced Developer
+    </span>
+  </div>
+  <div className="flex items-center">
+    <FaRegCheckCircle className={`text-secondary`} />
+    <span className="text-white ml-4">
+      10+ Years of Industry Expertise
+    </span>
+  </div>
+  <div className="flex items-center">
+    <FaRegCheckCircle className={`text-secondary`} />
+    <span className="text-white ml-4">
+      500+ Online Stores Delivered
+    </span>
+  </div>
+  <div className="flex items-center">
+   <FaRegCheckCircle className={`text-secondary`} />
+    <span className="text-white ml-4">
+      Affordable Costing but Quality Never Compromised
+    </span>
+  </div>
+</div>
+<button
+  type="submit"
+  className="group  bg-secondary text-black px-6 py-2 rounded-full text-lg font-semibold hover:bg-secondaryGreen transition duration-300 flex items-center gap-2
+"
+>
+  Book a Free Consultation
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-8 w-8 text-black transform transition-transform duration-300"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2}
+    style={{
+      transition: 'transform 0.3s',
+    }}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M13 7l5 5m0 0l-5 5m5-5H6"
+    />
+  </svg>
 
-              <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300">
-                Book a Free Consultation
-              </button>
+  <style jsx>{`
+    button.group:hover svg {
+      transform: rotate(-30deg);
+    }
+  `}</style>
+</button>
+            
             </div>
 
             <div className="relative">
-              <div className="bg-white p-8 rounded-2xl shadow-2xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                  Looking for Shopify Website?
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Send us your info — we&apos;ll be in touch soon.
-                </p>
+           
 
-                <form className="space-y-4">
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Your Email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
-                  <textarea
-                    placeholder="Tell us about your project"
-                    rows="4"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  ></textarea>
-                  <button
-                    type="submit"
-                    className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300"
-                  >
-                    Book a Free Consultation
-                  </button>
-                </form>
-              </div>
+<div className="bg-white p-8 rounded-2xl shadow-2xl">
+  <h3 className="text-3xl font-bold text-black mb-2">
+    Looking for Shopify Website?
+  </h3>
+  <p className="text-gray-600 mb-6">
+    Send us your info — we’ll be in touch soon.
+  </p>
+
+  <form className="space-y-4">
+    <input
+      type="text"
+      placeholder="Name *"
+      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+    />
+    <input
+      type="text"
+      placeholder="Business Name"
+      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+    />
+    <input
+      type="text"
+      placeholder="WhatApp Number/Contact Number *"
+      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+    />
+    <input
+      type="email"
+      placeholder="E-mail Address"
+      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+    />
+
+   <button
+  type="submit"
+  className="group w-full bg-secondary hover:bg-secondaryGreen text-black py-3 rounded-lg font-semibold transition duration-300 flex items-center justify-center gap-2"
+>
+  Book a Free Consultation
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-8 w-8 text-black transform transition-transform duration-300"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2}
+    style={{
+      transition: 'transform 0.3s',
+    }}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M13 7l5 5m0 0l-5 5m5-5H6"
+    />
+  </svg>
+
+  <style jsx>{`
+    button.group:hover svg {
+      transform: rotate(-30deg);
+    }
+  `}</style>
+</button>
+
+
+  </form>
+</div>
+
             </div>
           </div>
-        </div>
+        </div>       
       </section>
-
       {/* Ratings Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">4.2</div>
-              <div className="text-gray-600">Rated on Google</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">4.5</div>
-              <div className="text-gray-600">Rated on Clutch</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">4.9</div>
-              <div className="text-gray-600">Rated on Freelancer</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">4.9</div>
-              <div className="text-gray-600">Rated on Trustpilot</div>
-            </div>
-          </div>
+      <section className="py-12 bg-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  rounded-xl    ">
+  <div className="w-full  px-4 sm:px-6 lg:px-8">
+    <div className="flex flex-col md:flex-row justify-around items-center text-center divide-y md:divide-y-0 md:divide-x divide-gray-200">
+      
+      {/* Google */}
+      <div className="px-6 py-6 md:py-0 md:px-8 flex flex-col items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 mb-2" viewBox="0 0 48 48">
+          <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.3-5.7 7-10.3 7a11 11 0 1 1 0-22c2.6 0 5 1 6.8 2.6l5.7-5.7A19 19 0 1 0 24 43c9.5 0 17.5-6.9 19.5-16 0-.8.1-1.5.1-2.5z"/>
+        </svg>
+        <div className="flex space-x-1 mb-1">
+          {[...Array(5)].map((_, i) => (
+            <StarIcon key={i} className="w-5 h-5 text-yellow-400" />
+          ))}
         </div>
+        <p className="text-sm text-black font-medium">Rated 4.2 on Google</p>
+      </div>
+
+      {/* Clutch */}
+      <div className="px-6 py-6 md:py-0 md:px-8 flex flex-col items-center">
+        <svg className="h-6 mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283 64">
+          <text x="0" y="50" fontSize="48" fontWeight="bold" fill="#14142B">Clutch</text>
+        </svg>
+        <div className="flex space-x-1 mb-1">
+          {[...Array(5)].map((_, i) => (
+            <StarIcon key={i} className="w-5 h-5 text-yellow-400" />
+          ))}
+        </div>
+        <p className="text-sm text-black font-medium">Rated 4.5 on Clutch</p>
+      </div>
+
+      {/* Freelancer */}
+      <div className="px-6 py-6 md:py-0 md:px-8 flex flex-col items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 mb-2" viewBox="0 0 512 512">
+          <path fill="#29b2fe" d="M109 16l59 101-77-13zM175 128l64 48-56 40zM248 181l104-165-141 96zM360 16l-92 176 139-72zM117 192l61 45-79 57zM185 243l98 111-28-98zM287 366l140-50-88-19z"/>
+        </svg>
+        <div className="flex space-x-1 mb-1">
+          {[...Array(5)].map((_, i) => (
+            <StarIcon key={i} className="w-5 h-5 text-yellow-400" />
+          ))}
+        </div>
+        <p className="text-sm text-black font-medium">Rated 4.9 on Freelancer</p>
+      </div>
+
+      {/* Trustpilot */}
+      <div className="px-6 py-6 md:py-0 md:px-8 flex flex-col items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 mb-2" viewBox="0 0 512 512">
+          <path fill="#00b67a" d="M256 20L278 198l184-10L295 270l59 184-159-112-159 112 59-184L50 188l184 10z"/>
+        </svg>
+        <div className="flex space-x-1 mb-1">
+          {[...Array(5)].map((_, i) => (
+            <StarIcon key={i} className="w-5 h-5 text-yellow-400" />
+          ))}
+        </div>
+        <p className="text-sm text-black font-medium">Rated 4.9 on Trustpilot</p>
+      </div>
+
+    </div>
+  </div>
       </section>
+
 
       {/* Why Choose Us Section */}
-      <section id="services" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Why Choose MegaOceans as Your Shopify Partner?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our in-house experts help you avoid costly errors and offer it
-              all: setup, customization, and app development. We are a complete
-              Shopify development company for a reason.
-            </p>
+      <section id="services" className="py-16 bg-terinary">
+                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    {/* Header */}
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-bold text-secondary mb-4">
+        Why Choose MegaOceans as Your Shopify Partner?
+      </h2>
+      <p className="text-lg text-white max-w-3xl mx-auto">
+        Our in-house experts help you avoid costly errors and offer it all: setup, customization, and app development. We are a complete <strong>Shopify development company</strong> for a reason.
+      </p>
+    </div>
+
+    {/* Features Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {[
+        {
+          title: "Custom & Responsive Development",
+          desc: "Make the most of Shopify’s flexibility with a design that works flawlessly across multiple devices efficiently.",
+          icon: (
+            <img src="https://img.icons8.com/emoji/48/000000/sports-medal-emoji.png" alt="medal" className="w-10 h-10" />
+          ),
+        },
+        {
+          title: "Shopify Module Development",
+          desc: "Get customized Shopify modules according to your business requirements with added functionality.",
+          icon: (
+            <img src="https://img.icons8.com/color/48/bug.png" alt="bug" className="w-10 h-10" />
+          ),
+        },
+        {
+          title: "Site Migration & Theme Development",
+          desc: "Shift your existing Ecommerce store to Shopify with us, and have a tailored theme that aligns with your business vision.",
+          icon: (
+            <img src="https://img.icons8.com/color/48/24-7.png" alt="24-7" className="w-10 h-10" />
+          ),
+        },
+        {
+          title: "Quality Assurance",
+          desc: "Stay at peace with comprehensive stress testing that is as intense as testing gets!",
+          icon: (
+            <img src="https://img.icons8.com/color/48/speed.png" alt="speed" className="w-10 h-10" />
+          ),
+        },
+      ].map((feature, idx) => (
+        <div key={idx} className="bg-white p-8 rounded-xl shadow-md text-center">
+          <div className="flex justify-center mb-4">
+            {feature.icon}
           </div>
+          <h3 className="text-lg font-semibold text-gray-900 mb-2 ">
+            {feature.title}
+          </h3>
+          <p className="text-gray-600 text-sm">{feature.desc}</p>
+        </div>
+      ))}
+    </div>
+                 </div>
+              <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    
+    {/* Text Content */}
+    <div className="space-y-8 py-16 max-w-7xl">
+      {[
+        {
+          title: "Minimal & Clean Code",
+          desc: "Powered with SaaS, you get a clean, clutter-free code.",
+        },
+        {
+          title: "White Label, Always",
+          desc: "A <strong>Shopify website design company</strong> with default white-labeling.",
+        },
+        {
+          title: "Four Testing Layers",
+          desc: "Unparalleled quality assurance with four-tiered stress testing.",
+        },
+        {
+          title: "24×7 Team Support",
+          desc: "Our team is available round-the-clock to ensure excellence, always!",
+        },
+      ].map((item, index) => (
+        <div key={index} className="flex items-start gap-4">
+          <div className="group inline-block">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-8 w-8 text-white transform transition-transform duration-300"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2}
+    style={{
+      transition: 'transform 0.3s',
+    }}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M13 7l5 5m0 0l-5 5m5-5H6"
+    />
+  </svg>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <svg
-                  className="w-8 h-8 text-blue-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Custom & Responsive Development
-              </h3>
-              <p className="text-gray-600">
-                Make the most of Shopify&apos;s flexibility with a design that
-                works flawlessly across multiple devices efficiently.
-              </p>
-            </div>
+  <style jsx>{`
+    button.group:hover svg {
+      transform: rotate(-30deg);
+    }
+  `}</style>
+</div>
 
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <svg
-                  className="w-8 h-8 text-blue-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Shopify Module Development
-              </h3>
-              <p className="text-gray-600">
-                Get customized Shopify modules according to your business
-                requirements with added functionality.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <svg
-                  className="w-8 h-8 text-blue-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Site Migration & Theme Development
-              </h3>
-              <p className="text-gray-600">
-                Shift your existing Ecommerce store to Shopify with us, and have
-                a tailored theme that aligns with your business vision.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <svg
-                  className="w-8 h-8 text-blue-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Quality Assurance
-              </h3>
-              <p className="text-gray-600">
-                Stay at peace with comprehensive stress testing that is as
-                intense as testing gets!
-              </p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-8">
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <svg
-                  className="w-8 h-8 text-blue-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Minimal & Clean Code
-              </h3>
-              <p className="text-gray-600">
-                Powered with SaaS, you get a clean, clutter-free code.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <svg
-                  className="w-8 h-8 text-blue-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                White Label, Always
-              </h3>
-              <p className="text-gray-600">
-                A Shopify website design company with default white-labeling.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <svg
-                  className="w-8 h-8 text-blue-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Four Testing Layers
-              </h3>
-              <p className="text-gray-600">
-                Unparalleled quality assurance with four-tiered stress testing.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <svg
-                  className="w-8 h-8 text-blue-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                24*7 Team Support
-              </h3>
-              <p className="text-gray-600">
-                Our team is available round-the-clock to ensure excellence,
-                always!
-              </p>
-            </div>
+          <div>
+            <h3 className="text-lg font-bold text-secondary mb-1  transition duration-300">{item.title}</h3>
+            <p
+              className="text-white"
+              dangerouslySetInnerHTML={{ __html: item.desc }}
+            ></p>
           </div>
         </div>
+      ))}
+    </div>
+
+    {/* Right Side Image */}
+    <div className="flex justify-center">
+      <img
+        src="https://cdn.sanity.io/images/w8f1ak3c/production/95ee0f12f954c1ef67b70e50390d832828b109da-1600x1200.png?w=800"
+        alt="Shopify Example"
+        className="rounded-xl shadow-lg"
+      />
+    </div>
+  </div>
       </section>
+
 
       {/* Portfolio Section */}
       <section id="portfolio" className="py-20 bg-white">
@@ -434,7 +457,7 @@ export default function ShopifyPage() {
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Experts with Experience
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
               As a leading Shopify development company, our Shopify experience
               too breaks barriers when it comes to delivering designs that
               balance trends and functionality to increase profits like never
@@ -444,28 +467,28 @@ export default function ShopifyPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { name: "Kola Goodies", type: "UI Design & Development" },
+              { name: "Kola Goodies - UI Design & Development"},
               {
-                name: "Biotin Xtreme Hair Care",
-                type: "UI Design & Development",
+                name: "Biotin Xtreme Hair Care - UI Design & Development",
+                
               },
-              { name: "Caffe Birraio", type: "UI Design & Development" },
-              { name: "The Tenth House", type: "UI Design & Development" },
-              { name: "Vikarus", type: "UI Design & Development" },
+              { name: "Caffe Birraio - UI Design & Development"},
+              { name: "The Tenth House - UI Design & Development" },
+              { name: "Vikarus - UI Design & Development"},
               {
-                name: "Gills Building Supplies",
-                type: "UI Design & Development",
+                name: "Gills Building Supplies - UI Design & Development",
+               
               },
             ].map((project, index) => (
               <div
                 key={index}
-                className="bg-gray-100 rounded-xl p-8 hover:shadow-lg transition duration-300"
+                className=" rounded-xl p-8  "
               >
-                <div className="w-16 h-16 bg-blue-600 rounded-lg mb-6"></div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+               <img src="https://cdn.sanity.io/images/w8f1ak3c/production/95ee0f12f954c" className="w-full md:w-80 h-60 rounded-lg" />
+                <p className="text-base font-semibold text-gray-900 mt-2">
                   {project.name}
-                </h3>
-                <p className="text-gray-600">{project.type}</p>
+                </p>
+                
               </div>
             ))}
           </div>
@@ -553,376 +576,30 @@ export default function ShopifyPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Trusted and Loved by Customers and Brands
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                text: "I can highly recommend MegaOceans for web development work and template builds. With a very specific design to work with, they were highly professional and completed the work with little intervention or guidance, besides the source files. Excellent work.",
-                author: "Benedict Francis",
-                company: "Techniciti",
-              },
-              {
-                text: "To be honest, the project with MegaOceans was very easy going. They quickly understood the requirement and were able to finish the work without many revisions, but still with the right result. We were surprised after facing some bad experiences with other freelancers. Will definitely hire MegaOceans again for similar projects in the future.",
-                author: "Robin Bagchi",
-                company: "Spixnet GMBH",
-              },
-              {
-                text: "The team at MegaOceans are very smart, great designers! They understood our project and worked really well, quickly and efficiently on our models! Would like to hire again",
-                author: "Anthony Ciravolo",
-                company: "Operask",
-              },
-              {
-                text: "I am very happy with the results and value I received on the project. While I marked delivered on time, it was delayed, however with Covid and the complexity of the project its understandable. The team has been very attentive to my direction and was very easy to work with.",
-                author: "Stella Orlandino",
-                company: "Tipillino",
-              },
-            ].map((testimonial, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-xl">
-                <p className="text-gray-700 mb-4 italic">
-                  &ldquo;{testimonial.text}&rdquo;
-                </p>
-                <div>
-                  <p className="font-semibold text-gray-900">
-                    {testimonial.author}
-                  </p>
-                  <p className="text-gray-600">{testimonial.company}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Comparison */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Why MegaOceans?
-            </h2>
-            <p className="text-xl text-gray-600">
-              For you as a brand, we are a Shopify website design company that
-              excels in creating digital shopping experiences tailored as per
-              your requirements.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div className="grid grid-cols-1 lg:grid-cols-3">
-              <div className="bg-blue-600 text-white p-8">
-                <h3 className="text-2xl font-bold mb-6">MegaOceans</h3>
-                <ul className="space-y-4">
-                  <li className="flex items-center">
-                    <svg
-                      className="w-5 h-5 mr-3"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    Audience-Centric Custom Design
-                  </li>
-                  <li className="flex items-center">
-                    <svg
-                      className="w-5 h-5 mr-3"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    Enhanced UX/UI Design
-                  </li>
-                  <li className="flex items-center">
-                    <svg
-                      className="w-5 h-5 mr-3"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    Custom Features and Integrations
-                  </li>
-                  <li className="flex items-center">
-                    <svg
-                      className="w-5 h-5 mr-3"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    Advanced SEO and Performance Optimization
-                  </li>
-                  <li className="flex items-center">
-                    <svg
-                      className="w-5 h-5 mr-3"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    Comprehensive Post-Launch Support
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gray-100 p-8">
-                <h3 className="text-2xl font-bold mb-6 text-gray-900">
-                  Others
-                </h3>
-                <ul className="space-y-4">
-                  <li className="flex items-center text-gray-600">
-                    <svg
-                      className="w-5 h-5 mr-3 text-red-500"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    Limited Customization
-                  </li>
-                  <li className="flex items-center text-gray-600">
-                    <svg
-                      className="w-5 h-5 mr-3 text-red-500"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    Basic Templates
-                  </li>
-                  <li className="flex items-center text-gray-600">
-                    <svg
-                      className="w-5 h-5 mr-3 text-red-500"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    Limited Support
-                  </li>
-                  <li className="flex items-center text-gray-600">
-                    <svg
-                      className="w-5 h-5 mr-3 text-red-500"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    Poor Performance
-                  </li>
-                  <li className="flex items-center text-gray-600">
-                    <svg
-                      className="w-5 h-5 mr-3 text-red-500"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    No Post-Launch Support
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Let&apos;s get into something new, collaboratively!
-            </h2>
-            <p className="text-xl text-blue-100">
-              Connect with the Best Shopify Development Company Today!
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="bg-white p-8 rounded-2xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Looking for Shopify Website?
-              </h3>
-              <p className="text-gray-600 mb-6">
-                Send us your info — we&apos;ll be in touch soon.
-              </p>
-
-              <form className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-                <textarea
-                  placeholder="Tell us about your project"
-                  rows="4"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                ></textarea>
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300"
-                >
-                  Book a Free Consultation
-                </button>
-              </form>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Looking for Digital Marketing Service?
-              </h3>
-              <p className="text-gray-600 mb-6">
-                Send us your info — we&apos;ll be in touch soon.
-              </p>
-
-              <form className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-                <textarea
-                  placeholder="Tell us about your project"
-                  rows="4"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                ></textarea>
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300"
-                >
-                  Free Consultation
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
+     <TestimonialsSection />
+      {/* Why MegaOceans Section */}
+    <WhyMegaoceans />
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-2xl font-bold mb-4">MegaOceans</h3>
-              <p className="text-gray-400">
-                Top UI UX companies in India | MegaOceans
-              </p>
-            </div>
+      <ShopifyFeatures />
+      <Footer />
+      
 
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Delhi NCR</h4>
-              <p className="text-gray-400">
-                Gaur City Mall, Greater Noida, Uttar Pradesh
-              </p>
-            </div>
 
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Indore</h4>
-              <p className="text-gray-400">
-                Skye Corporate Park, Indore, Madhya Pradesh
-              </p>
-            </div>
 
-            <div>
-              <h4 className="text-lg font-semibold mb-4">New York</h4>
-              <p className="text-gray-400">
-                PO Box 643, Crompond, NY, United States
-              </p>
-            </div>
-          </div>
 
-          <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <div className="flex space-x-4 mb-4 md:mb-0">
-              <a href="#" className="text-gray-400 hover:text-white">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white">
-                Terms of Services
-              </a>
-            </div>
 
-            <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white">
-                Behance
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white">
-                Dribbble
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white">
-                LinkedIn
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white">
-                Instagram
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white">
-                Facebook
-              </a>
-            </div>
-          </div>
+    
 
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-            <p className="text-gray-400">© MegaOceans All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+
+
+
+
+
+     
+
+     
+
+     
     </div>
   );
 }

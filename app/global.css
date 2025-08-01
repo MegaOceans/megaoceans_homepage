@@ -32,3 +32,8 @@ body {
     text-wrap: balance;
   }
 }
+@layer utilities {
+  .rotate-custom {
+    transform: rotate(-40deg);
+  }
+}
