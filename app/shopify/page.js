@@ -6,13 +6,17 @@ import { StarIcon } from '@heroicons/react/24/solid';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import { MdGppGood } from "react-icons/md";
+
 import { Autoplay } from 'swiper/modules';
 import TestimonialsSection from "./testimonial";
+import { SiCodeigniter } from "react-icons/si";
 import WhyMegaoceans from "./pros";
 import Footer from "../client/footer/footer";
 import SvgBG from "../client/heading/SvgBG";
-import { FaArrowRight, FaRegCheckCircle } from "react-icons/fa";
+import { FaArrowRight, FaCode, FaRegCheckCircle, FaShopify } from "react-icons/fa";
 import ShopifyFeatures from "./shopifyFeatures";
+import ShopifyFooter from "../client/footer/shopifyFooter";
 export default function ShopifyPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -24,7 +28,7 @@ export default function ShopifyPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <div className="text-2xl font-bold text-white">MegaOceans</div>
+              <div className="text-lg lg:text-2xl font-bold text-white">MegaOceans</div>
             </div>
 
             <div className="hidden md:block">
@@ -115,22 +119,22 @@ export default function ShopifyPage() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-20 bg-terinary h-screen  flex flex-col items-center w-full relative">
+      <section className="pt-4 lg:pt-16 bg-terinary h-full  flex flex-col items-center w-full ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-5xl lg:text-[50px] font-semibold text-white mb-6">
-                The Best <span className="text-secondary lg:text-[50px] text-5xl ">Shopify Development</span> Company
+              <h1 className="text-4xl lg:text-[50px] font-semibold text-white mb-6 text-center lg:text-left">
+                The Best <span className="text-secondary lg:text-[50px] text-4xl  ">Shopify Development</span> Company
               
               </h1>
-              <p className="text-lg text-white mb-8">
+              <p className="text-sm lg:text-lg text-white mb-8 text-center lg:text-left">
                 Partner with us to develop your e-commerce Store With the Best
                 Shopify Development Company while maintaining 100% ownership and
                 control.
               </p>
 
              <div className="space-y-4 mb-8">
-  <div className="flex items-center">
+  <div className="flex items-center text-sm lg:text-lg">
     <FaRegCheckCircle className={`text-secondary`} />
     <span className="text-white ml-4">
       Highly Experienced Developer
@@ -139,7 +143,7 @@ export default function ShopifyPage() {
   <div className="flex items-center">
     <FaRegCheckCircle className={`text-secondary`} />
     <span className="text-white ml-4">
-      10+ Years of Industry Expertise
+      3+ Years of Industry Expertise
     </span>
   </div>
   <div className="flex items-center">
@@ -187,11 +191,7 @@ export default function ShopifyPage() {
 </button>
             
             </div>
-
-            <div className="relative">
-           
-
-<div className="bg-white p-8 rounded-2xl shadow-2xl">
+            <div className="bg-white p-8 rounded-2xl shadow-2xl">
   <h3 className="text-3xl font-bold text-black mb-2">
     Looking for Shopify Website?
   </h3>
@@ -253,83 +253,23 @@ export default function ShopifyPage() {
 
 
   </form>
-</div>
-
             </div>
           </div>
         </div>       
       </section>
-      {/* Ratings Section */}
-      <section className="py-12 bg-white max-w-7xl mx-auto px-4 sm:px-6 lg:px-8  rounded-xl    ">
-  <div className="w-full  px-4 sm:px-6 lg:px-8">
-    <div className="flex flex-col md:flex-row justify-around items-center text-center divide-y md:divide-y-0 md:divide-x divide-gray-200">
       
-      {/* Google */}
-      <div className="px-6 py-6 md:py-0 md:px-8 flex flex-col items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 mb-2" viewBox="0 0 48 48">
-          <path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.3-5.7 7-10.3 7a11 11 0 1 1 0-22c2.6 0 5 1 6.8 2.6l5.7-5.7A19 19 0 1 0 24 43c9.5 0 17.5-6.9 19.5-16 0-.8.1-1.5.1-2.5z"/>
-        </svg>
-        <div className="flex space-x-1 mb-1">
-          {[...Array(5)].map((_, i) => (
-            <StarIcon key={i} className="w-5 h-5 text-yellow-400" />
-          ))}
-        </div>
-        <p className="text-sm text-black font-medium">Rated 4.2 on Google</p>
-      </div>
-
-      {/* Clutch */}
-      <div className="px-6 py-6 md:py-0 md:px-8 flex flex-col items-center">
-        <svg className="h-6 mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283 64">
-          <text x="0" y="50" fontSize="48" fontWeight="bold" fill="#14142B">Clutch</text>
-        </svg>
-        <div className="flex space-x-1 mb-1">
-          {[...Array(5)].map((_, i) => (
-            <StarIcon key={i} className="w-5 h-5 text-yellow-400" />
-          ))}
-        </div>
-        <p className="text-sm text-black font-medium">Rated 4.5 on Clutch</p>
-      </div>
-
-      {/* Freelancer */}
-      <div className="px-6 py-6 md:py-0 md:px-8 flex flex-col items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 mb-2" viewBox="0 0 512 512">
-          <path fill="#29b2fe" d="M109 16l59 101-77-13zM175 128l64 48-56 40zM248 181l104-165-141 96zM360 16l-92 176 139-72zM117 192l61 45-79 57zM185 243l98 111-28-98zM287 366l140-50-88-19z"/>
-        </svg>
-        <div className="flex space-x-1 mb-1">
-          {[...Array(5)].map((_, i) => (
-            <StarIcon key={i} className="w-5 h-5 text-yellow-400" />
-          ))}
-        </div>
-        <p className="text-sm text-black font-medium">Rated 4.9 on Freelancer</p>
-      </div>
-
-      {/* Trustpilot */}
-      <div className="px-6 py-6 md:py-0 md:px-8 flex flex-col items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 mb-2" viewBox="0 0 512 512">
-          <path fill="#00b67a" d="M256 20L278 198l184-10L295 270l59 184-159-112-159 112 59-184L50 188l184 10z"/>
-        </svg>
-        <div className="flex space-x-1 mb-1">
-          {[...Array(5)].map((_, i) => (
-            <StarIcon key={i} className="w-5 h-5 text-yellow-400" />
-          ))}
-        </div>
-        <p className="text-sm text-black font-medium">Rated 4.9 on Trustpilot</p>
-      </div>
-
-    </div>
-  </div>
-      </section>
+      
 
 
       {/* Why Choose Us Section */}
-      <section id="services" className="py-16 bg-terinary">
+      <section id="services" className="py-16  bg-primary">
                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     {/* Header */}
     <div className="text-center mb-16">
-      <h2 className="text-4xl font-bold text-secondary mb-4">
+      <h2 className="text-2xl lg:text-4xl font-bold text-secondary mb-4">
         Why Choose MegaOceans as Your Shopify Partner?
       </h2>
-      <p className="text-lg text-white max-w-3xl mx-auto">
+      <p className="text-sm lg:text-lg text-white max-w-3xl mx-auto">
         Our in-house experts help you avoid costly errors and offer it all: setup, customization, and app development. We are a complete <strong>Shopify development company</strong> for a reason.
       </p>
     </div>
@@ -341,39 +281,40 @@ export default function ShopifyPage() {
           title: "Custom & Responsive Development",
           desc: "Make the most of Shopify’s flexibility with a design that works flawlessly across multiple devices efficiently.",
           icon: (
-            <img src="https://img.icons8.com/emoji/48/000000/sports-medal-emoji.png" alt="medal" className="w-10 h-10" />
+           <FaCode className="w-10 h-10" style={{ color: "white" }} />
           ),
         },
         {
           title: "Shopify Module Development",
           desc: "Get customized Shopify modules according to your business requirements with added functionality.",
           icon: (
-            <img src="https://img.icons8.com/color/48/bug.png" alt="bug" className="w-10 h-10" />
+            <FaShopify className="w-10 h-10" style={{ color: "white" }} />
           ),
         },
         {
           title: "Site Migration & Theme Development",
           desc: "Shift your existing Ecommerce store to Shopify with us, and have a tailored theme that aligns with your business vision.",
           icon: (
-            <img src="https://img.icons8.com/color/48/24-7.png" alt="24-7" className="w-10 h-10" />
+           
+<SiCodeigniter className="w-10 h-10" style={{ color: "white" }}  />
           ),
         },
         {
           title: "Quality Assurance",
           desc: "Stay at peace with comprehensive stress testing that is as intense as testing gets!",
           icon: (
-            <img src="https://img.icons8.com/color/48/speed.png" alt="speed" className="w-10 h-10" />
+            <MdGppGood className="w-10 h-10" style={{ color: "white" }}  />
           ),
         },
       ].map((feature, idx) => (
-        <div key={idx} className="bg-white p-8 rounded-xl shadow-md text-center">
+        <div key={idx} className="bg-terinary p-8 rounded-xl shadow-md text-center">
           <div className="flex justify-center mb-4">
             {feature.icon}
           </div>
-          <h3 className="text-lg font-semibold text-gray-900 mb-2 ">
+          <h3 className="text-lg font-semibold text-secondary mb-2 ">
             {feature.title}
           </h3>
-          <p className="text-gray-600 text-sm">{feature.desc}</p>
+          <p className="text-white text-sm">{feature.desc}</p>
         </div>
       ))}
     </div>
@@ -428,9 +369,9 @@ export default function ShopifyPage() {
 </div>
 
           <div>
-            <h3 className="text-lg font-bold text-secondary mb-1  transition duration-300">{item.title}</h3>
+            <h3 className="text-base lg:text-lg font-bold text-secondary mb-1  transition duration-300">{item.title}</h3>
             <p
-              className="text-white"
+              className="text-white text-xs lg:text-sm"
               dangerouslySetInnerHTML={{ __html: item.desc }}
             ></p>
           </div>
@@ -439,11 +380,11 @@ export default function ShopifyPage() {
     </div>
 
     {/* Right Side Image */}
-    <div className="flex justify-center">
+    <div className="flex justify-center lg:mt-4">
       <img
-        src="https://cdn.sanity.io/images/w8f1ak3c/production/95ee0f12f954c1ef67b70e50390d832828b109da-1600x1200.png?w=800"
+        src="https://ik.imagekit.io/e5d019f0b85d/Megaoceans.com/shopify_image?updatedAt=1754670427821"
         alt="Shopify Example"
-        className="rounded-xl shadow-lg"
+        className="rounded-xl h-72 lg:h-96  shadow-lg"
       />
     </div>
   </div>
@@ -451,13 +392,13 @@ export default function ShopifyPage() {
 
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-20 bg-white">
+      <section id="portfolio" className="py-20 bg-terinary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-2xl lg:text-4xl font-bold text-secondary mb-6">
               Experts with Experience
             </h2>
-            <p className="text-lg text-gray-600 max-w-4xl mx-auto">
+            <p className="text-sm lg:text-lg text-white max-w-4xl mx-auto">
               As a leading Shopify development company, our Shopify experience
               too breaks barriers when it comes to delivering designs that
               balance trends and functionality to increase profits like never
@@ -485,7 +426,7 @@ export default function ShopifyPage() {
                 className=" rounded-xl p-8  "
               >
                <img src="https://cdn.sanity.io/images/w8f1ak3c/production/95ee0f12f954c" className="w-full md:w-80 h-60 rounded-lg" />
-                <p className="text-base font-semibold text-gray-900 mt-2">
+                <p className="text-base font-semibold text-secondary mt-2">
                   {project.name}
                 </p>
                 
@@ -496,84 +437,7 @@ export default function ShopifyPage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Easy and Powerful Features, Integrated by the Best Shopify
-              Development Company
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              There&apos;s more than meets the eye when it comes to Ecommerce
-              websites making the right impact and conversions. With
-              MegaOceans&apos; Shopify development services, you get to make the
-              most of Shopify&apos;s brilliant features with our reputation of
-              creative thinkers that amalgamate functionality with design like
-              nobody else.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Ease of Use",
-                desc: "User-friendly and highly intuitive with drag-and-drop",
-              },
-              {
-                title: "Affordable Pricing",
-                desc: "Flexible pricing according to your budgets",
-              },
-              {
-                title: "Accessible Integrations",
-                desc: "Sorted access to App integrations for great functionality",
-              },
-              {
-                title: "Secure and Reliable",
-                desc: "Foolproof security and high reliability for the best results",
-              },
-              {
-                title: "Fully Customizable",
-                desc: "Mobile-responsive professional themes to personalize look and feel",
-              },
-              {
-                title: "Secure Payment Process",
-                desc: "Easy integration with Shopify Payments and third-party payment platforms.",
-              },
-              {
-                title: "Inventory Management",
-                desc: "Inventory tracking updates in real-time for easy stock management.",
-              },
-              {
-                title: "Cross-channel Selling",
-                desc: "Capabilities to sell on multiple channels such as Facebook and Amazon from a single dashboard.",
-              },
-              {
-                title: "Cart Recovery Features",
-                desc: "Automated reminders on customer mail to recover abandoned carts for recovering lost sales.",
-              },
-              {
-                title: "Analytics and Reporting",
-                desc: "Organized dashboards and reports to track customer behavior and make data-driven decisions.",
-              },
-              {
-                title: "Application Integrations",
-                desc: "Shopify App Store facilitates access to various third-party tools for accounting, customer support and others.",
-              },
-              {
-                title: "High Scalability",
-                desc: "Adaptable to business growth, from a small business to a significant online brand.",
-              },
-            ].map((feature, index) => (
-              <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600">{feature.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+     
 
       {/* Testimonials Section */}
      <TestimonialsSection />
@@ -581,25 +445,8 @@ export default function ShopifyPage() {
     <WhyMegaoceans />
       {/* Footer */}
       <ShopifyFeatures />
-      <Footer />
-      
-
-
-
-
-
-    
-
-
-
-
-
-
-     
-
-     
-
-     
+      <ShopifyFooter />
+           
     </div>
   );
 }

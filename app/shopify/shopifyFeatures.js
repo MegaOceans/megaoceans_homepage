@@ -58,7 +58,7 @@ export default function ShopifyFeatures() {
     <section
       id="features-section"
       ref={sectionRef}
-      className={`w-full h-screen bg-[#f9f6f4] relative`}
+      className={`w-full h-screen bg-primary relative`}
     >
       <div className="max-w-7xl mx-auto h-full flex">
         {/* Left Content */}
@@ -68,21 +68,48 @@ export default function ShopifyFeatures() {
           }`}
         >
           <div className="pt-16">
-            <h2 className="text-4xl font-bold text-black leading-snug">
+            <h2 className="text-4xl font-bold text-secondary leading-snug">
               Easy and Powerful Features, <br />
               Integrated by the Best Shopify Development Company
             </h2>
-            <p className="mt-6 text-lg text-gray-700 leading-relaxed">
+            <p className="mt-6 text-lg text-white leading-relaxed">
               There’s more than meets the eye when it comes to Ecommerce websites
               making the right impact and conversions. With{" "}
-              <span className="font-semibold">Pix Brand’s Shopify development services,</span>{" "}
+              <span className="font-semibold text-secondary">Pix Brand’s Shopify development services,</span>{" "}
               you get to make the most of Shopify’s brilliant features with our
               reputation of creative thinkers that amalgamate functionality with
               design like nobody else.
             </p>
-            <button className="mt-8 bg-red-600 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 hover:bg-red-700 transition-all w-fit">
-              Book a Free Consultation →
-            </button>
+            <button
+  type="submit"
+  className="group  bg-secondary text-black px-6 py-2 mt-8 rounded-full text-lg font-semibold hover:bg-secondaryGreen transition duration-300 flex items-center gap-2
+"
+>
+  Book a Free Consultation
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="h-8 w-8 text-black transform transition-transform duration-300"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2}
+    style={{
+      transition: 'transform 0.3s',
+    }}
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M13 7l5 5m0 0l-5 5m5-5H6"
+    />
+  </svg>
+
+  <style jsx>{`
+    button.group:hover svg {
+      transform: rotate(-30deg);
+    }
+  `}</style>
+</button>
           </div>
         </div>
 
@@ -97,11 +124,11 @@ export default function ShopifyFeatures() {
           {features.map((feature) => (
             <div
               key={feature.id}
-              className="bg-white rounded-xl p-6 shadow-sm border border-gray-200"
+              className="bg-terinary rounded-xl p-6 shadow-sm border border-gray-200"
             >
-              <span className="text-red-500 font-semibold">{feature.id}.</span>
-              <h3 className="mt-2 text-lg font-bold">{feature.title}</h3>
-              <p className="mt-2 text-gray-700 text-sm leading-relaxed">
+              <span className="text-secondary font-semibold">{feature.id}.</span>
+              <h3 className="mt-2 text-lg text-secondary font-bold">{feature.title}</h3>
+              <p className="mt-2 text-white text-sm leading-relaxed">
                 {feature.description}
               </p>
             </div>

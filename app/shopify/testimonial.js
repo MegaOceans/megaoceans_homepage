@@ -44,11 +44,11 @@ export default function TestimonialsSection() {
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900">
+          <h2 className="text-2xl lg:text-4xl font-bold text-secondary">
             Trusted and Loved by Customers and Brands
           </h2>
         </div>
@@ -61,18 +61,18 @@ export default function TestimonialsSection() {
           {visibleTestimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-[#f9f6f4] p-8 rounded-xl relative flex flex-col h-full"
+              className="bg-terinary p-8 rounded-xl relative flex flex-col h-full"
               style={{ minHeight: "320px" }} // 👈 uniform height
             >
               <span className="absolute top-6 left-6 text-red-500 text-5xl font-bold leading-none">
                 &ldquo;
               </span>
-              <p className="text-gray-800 mt-10 mb-6 leading-relaxed flex-grow">
+              <p className="text-white mt-10 mb-6 leading-relaxed text-sm lg:text-lg flex-grow">
                 {testimonial.text}
               </p>
               <div>
-                <p className="font-semibold text-gray-900">{testimonial.author}</p>
-                <p className="text-sm italic text-gray-600">{testimonial.company}</p>
+                <p className="font-semibold text-sm lg:text-lg  text-secondary">{testimonial.author}</p>
+                <p className="text-xs lg:text-sm italic text-white">{testimonial.company}</p>
               </div>
             </div>
           ))}
