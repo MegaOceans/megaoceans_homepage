@@ -1,39 +1,88 @@
-"use client";
-import { useRef } from "react";
-import Navbar from "./client/navbar/navbar";
-import Heading from "./client/heading/heading";
-import Services from "./client/services/services";
-import WhyUs from "./client/whyUs/whyUs";
-import PricingPlan from "./client/pricingPlan/pricingPlan";
-import Templates from "./client/templates/templates";
-import MainTestimonial from "./client/Testimonials/NewTestimonial/MainTestimonial";
-import Faq from "./client/F&Q/fq";
-import ContactUs from "./client/contactUs/contactUs";
-import Footer from "./client/footer/footer";
+import HomePage from "./client/HomePage";
+
+const siteUrl = "https://megaoceans.com";
+
+export const metadata = {
+  title: "Custom Web & Mobile App Development Company",
+  description:
+    "MegaOceans designs and develops custom websites, mobile apps, e-commerce products, and scalable software for startups and growing businesses.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    title: "MegaOceans | Custom Web & Mobile App Development",
+    description:
+      "Custom websites, mobile apps, e-commerce products, and scalable software built for startups and growing businesses.",
+    siteName: "MegaOceans",
+    images: [
+      {
+        url: "/header.png",
+        width: 1000,
+        height: 666,
+        alt: "MegaOceans custom software development",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MegaOceans | Custom Web & Mobile App Development",
+    description:
+      "Custom websites, mobile apps, e-commerce products, and scalable software for growing businesses.",
+    images: ["/header.png"],
+  },
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "MegaOceans",
+      url: siteUrl,
+      logo: `${siteUrl}/favicon.ico`,
+      email: "ishan@megaoceans.com",
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: "MegaOceans",
+      publisher: { "@id": `${siteUrl}/#organization` },
+      inLanguage: "en",
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": `${siteUrl}/#business`,
+      name: "MegaOceans",
+      url: siteUrl,
+      description:
+        "Custom web development, mobile app development, UI/UX design, e-commerce development, and software consulting.",
+      provider: { "@id": `${siteUrl}/#organization` },
+      areaServed: "Worldwide",
+      serviceType: [
+        "Custom web development",
+        "Mobile app development",
+        "UI/UX design",
+        "E-commerce development",
+        "Software consulting",
+      ],
+    },
+  ],
+};
 
 export default function Home() {
-  const contactUsRef = useRef(null); // Create a reference for ContactUs
-
   return (
-    <div className="flex items-center flex-col overflow-x-hidden">
-      <Navbar contactUsRef={contactUsRef} /> {/* Pass ref to Navbar */}
-      <Heading contactUsRef={contactUsRef} />
-      <Services />
-      <WhyUs />
-      <div className="w-full bg-terinary flex justify-center py-12">
-        <PricingPlan />
-      </div>
-      <Templates />
-      <MainTestimonial />
-      <Faq />
-      {/* Contact Us Section */}
-      <div
-        ref={contactUsRef}
-        className="w-full flex justify-center bg-primary py-12"
-      >
-        <ContactUs />
-      </div>
-      <Footer />
-    </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+        }}
+      />
+      <HomePage />
+    </>
   );
 }

@@ -2,8 +2,8 @@ import ServiceBar from "./servicesBar/servicesBar";
 
 export default function Services() {
   return (
-    <div className="w-full text-white flex flex-col items-center gap-12 py-12 bg-primary">
-      <p className="text-5xl font-extrabold text-center">Our Services</p>
+    <section className="w-full text-white flex flex-col items-center gap-12 py-12 bg-primary" aria-labelledby="services-heading">
+      <h2 id="services-heading" className="text-5xl font-extrabold text-center">Web, App &amp; Design Services</h2>
 
       <div className="w-view grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
         <ServiceBar
@@ -57,6 +57,6 @@ export default function Services() {
           ]}
         />
       </div>
-    </div>
+    </section>
   );
 }

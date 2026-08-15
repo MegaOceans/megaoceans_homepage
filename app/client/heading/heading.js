@@ -19,18 +19,18 @@ export default function Heading({ contactUsRef }) {
   };
 
   return (
-    <div className="relative w-full min-h-screen flex flex-col items-center justify-center text-center px-36 mt-16 lg:mt-2 py-12 overflow-hidden bg-[#001220]">
+    <section className="relative w-full min-h-screen flex flex-col items-center justify-center text-center px-6 md:px-16 lg:px-36 mt-16 lg:mt-2 py-12 overflow-hidden bg-[#001220]">
       {/* Background Image Container */}
       <SvgBG />
       {/* <Parallax /> */}
       {/* Heading Content */}
       <div className="z-10">
         <div className="flex flex-col items-center gap-6 py-8">
-          <p className="text-4xl text-white font-bold leading-normal">
+          <h1 className="text-4xl text-white font-bold leading-normal">
             <span className="text-secondary italic text-5xl mr-4">Bold</span>
             Designs for Brands That Don&rsquo;t Do
             <span className="text-secondary italic text-5xl ml-4">Boring</span>
-          </p>
+          </h1>
           <p className="text-lg font-medium text-white max-w-3xl">
             From innovative designs that captivate to seamless functionality
             that performs, experience the Bold Designs difference and elevate
@@ -79,6 +79,6 @@ export default function Heading({ contactUsRef }) {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
