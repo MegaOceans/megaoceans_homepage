@@ -11,11 +11,11 @@ export default function Templates() {
     "/assets/templates/mob-app.png",
   ];
   return (
-    <div className="w-full bg-primary py-16 flex flex-col items-center gap-12 text-white">
-      <p className="text-5xl font-extrabold">Recent Works</p>
+    <section className="w-full bg-primary py-16 flex flex-col items-center gap-12 text-white" aria-labelledby="work-heading">
+      <h2 id="work-heading" className="text-5xl font-extrabold">Recent Software Projects</h2>
       <div className="flex items-center gap-6 flex-wrap h-[auto] w-[auto] relative">
         <Carousel images={images} />
       </div>
-    </div>
+    </section>
   );
 }
